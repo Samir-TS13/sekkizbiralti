@@ -1,0 +1,764 @@
+/*............... MAIN ......................*/
+.main {
+    padding-top: 45px;
+    width: 1100px;
+    margin-bottom: 90px;
+    margin-right: 50px;
+}
+
+/*............... HEADER ......................*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+    margin-bottom: 70px;
+}
+
+/*............... SIDEBAR ......................*/
+.sidebar {
+    padding: 50px 15px 60px 55px;
+    width: 252px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar-logo {
+    margin-bottom: 70px;
+    height: 100px;
+    width: 380px;
+    transform: translateX(-30%);
+    margin-top: -72px;
+}
+
+.slider-information span {
+    align-items: center;
+    transform: translateX(-30%);
+}
+
+.sidebar-info img {
+    height:25px;
+    width: 25px;
+    transform: translateX(-30%);
+}
+
+.sidebar-info {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/*............... NAV ......................*/
+.nav-title {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.nav-list {
+    font-size: 19px;
+}
+
+.nav-list li {
+    margin-bottom: 15px;
+}
+
+.nav-list a {
+    transition: color 0.2s ease-in;
+    align-items: center;
+    display: flex;
+}
+
+.nav-list a:hover {
+    color: #FD2E24;
+}
+
+.nav-list img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 26px;
+    height: auto;
+    object-fit: none;
+}
+
+/*............... NAV HEADER ......................*/
+.nav-header {
+    font-size: 17px;
+    font-family: 'Circular Std';
+    font-weight: 500;
+}
+
+.nav-header-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header-link-text {
+    position: relative;
+}
+
+.nav-header-link-text::after {
+    position: absolute;
+    left: 0;
+    width: 0%;
+    bottom: -9px;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: width 0.2s ease-in;
+}
+
+.nav-header-link-text:hover::after {
+    width: 100%;
+}
+
+.nav-header-link-text.active::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -9px;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: black;
+}
+
+.nav-header-link-text + .nav-header-link-text {
+    margin-left: 42px;
+}
+
+.nav-header-link-text + .nav-header-link-icon {
+    margin-left: 50px;
+}
+
+.nav-header-link-icon + .nav-header-link-icon {
+    margin-left: 25px;
+}
+
+.nav-header-link-icon img {
+    width: 23px;
+    height: 23px;
+}
+
+.link-basket:hover {
+    background: url("../img/icons/basket-h.gif") no-repeat;
+    background-size: contain; /* to fit the image into the container size */
+    opacity: 0.6; /* hover transparency reduction */
+}
+
+.link-person:hover {
+    opacity: 0.6; 
+}
+
+/*............... SEARCH ......................*/
+.search {
+    width: 490px;
+    height: 44px;
+}
+
+.search-label {
+    height: 100%;
+    display: flex;
+}
+
+.search-icon {
+    margin-right: 7px;
+}
+
+.search-input {
+    padding: 0 10px;
+    flex-grow: 1;
+    background: none;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Circular Std';
+}
+
+.search-input:focus, .search-input:active {
+    background-color: #fff;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+/*............... CARDS WRAPPER......................*/
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.cards-wrapper-row {
+    display: flex;
+    column-gap: 20px;
+}
+
+.cards-wrapper-col span {
+    font-size: 20px;
+    text-align: center;
+    color: hwb(0 10% 89% / 0.66);
+}
+
+.card-section span {
+    font-size: 19px;
+    text-align: center;
+    color: hwb(0 10% 89% / 0.66);
+}
+
+.col-horizontal {
+    display: flex;
+    column-gap: 20px;
+}
+
+.col-vertical {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/*............... CARDS ......................*/
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px #4395939a;
+}
+
+.card-horizontal {
+    width: 525px;
+    height: 180px;
+}
+
+.card-sale {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #786e6e;
+    width: 525px;
+    height: 150px;
+}
+
+.card-sale span {
+    color: #efebeb;
+}
+
+.card-vertical{
+    width: 250px;
+    height: 380px;
+}
+
+.card-product{
+    position: relative;
+}
+
+.card-product-link {
+    width: 100%;
+    height: 100%;
+}
+
+.card-product-fav-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    text-align: center;  
+}
+
+.card-product-fav-btn svg:active {
+    background-color: #4395939a; /* Button color when pressed */
+    transform: translateY(4px); /* Slide the button down when pressed */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Shadow to create a visual effect */
+}
+
+.card-product-fav-btn svg {
+    display: inline-block;
+    vertical-align: middle;
+    stroke: black;
+    fill: #fff;
+    transition: all 0.2s ease-in;
+}
+
+.card-product-fav-btn:hover svg {
+    stroke: #FD2E24;
+    fill: #FD2E24;
+}
+
+.card-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-section {
+    background-color: #d8dadc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.card-section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-section-desc {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-section-red .card-section-title{
+    color: #FD2E24;
+}
+
+/*............... REGISTRATION ......................*/
+.card-registration {
+    background-color: #d8dadc;
+    padding: 12px;
+    width: 525px;
+    height: 220px;
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#orderForm label {
+    margin-bottom: 5px;
+}
+
+#orderForm input,
+#orderForm button {
+    margin-bottom: 8px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.button-order {
+    background-color: #786e6e;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px; 
+    height: 35px; 
+    transition: background-color 0.3s ease;
+}
+
+.button-order:hover {
+    background-color: #dc0e0e;
+}
+
+.button-order:active {
+    background-color: #4395939a; /* Button color when pressed */
+    transform: translateY(2px); /* Slide the button down when pressed */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Shadow to create a visual effect */
+}
+
+#responseMessage {
+    margin-top: 10px;
+}
+
+/*............... MEDIA ......................*/
+/*............... MEDIA ......................*/
+
+/*............... 1200 ......................*/
+@media (max-width: 1200px) {
+    .card-vertical{
+        width: 200px;
+        height: 380px; 
+        object-fit: contain; 
+        display: block; 
+        margin: 0 auto;
+    }
+    .card-sale {
+        font-size: 3px;
+        width: 450px;
+        height: 150px;
+    }
+    .card-registration {
+        width: 450px;
+        height: 220px;
+    }
+    .card-section {
+        width: 450px;
+        height: 180px; 
+        object-fit: contain; 
+        display: block; 
+    }
+    .sidebar {
+        width: 210px;
+        min-height: 100vh;
+    }
+    .header-search{
+        width: 190px;
+        height: 44px;
+    }
+    .search-icon {
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    .nav-title {
+        font-size: 25px;
+    }
+    .nav-list {
+        font-size: 18px;
+    }
+}
+
+/*............... 1100 ......................*/
+@media (max-width: 1100px) {
+    .card-vertical{
+        width: 190px;
+        height: 380px; 
+        object-fit: contain; 
+        display: block; 
+        margin: 0 auto;
+    }
+    .card-sale {
+        width: 350px;
+        height: 150px;
+    }
+    .card-sale span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .card-registration {
+        width: 350px;
+        height: 220px;
+    }
+    .card-section {
+        width: 350px;
+        height: 180px; 
+        object-fit: contain; 
+        display: block; 
+    }
+    .header-search{
+        width: 190px;
+        height: 44px;
+    }
+    .search-icon {
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    .nav-title {
+        font-size: 25px;
+    }
+    .nav-list {
+        font-size: 18px;
+    }
+    .sidebar {
+        width: 210px;
+        min-height: 100vh;
+    }
+    .sidebar-info {
+        font-size: 15px;
+    }
+    .sidebar-logo {
+        height: 100px;
+        width: 360px;
+    }
+}
+
+/*.......................... 1000 ............................*/
+@media (max-width: 1000px) {
+    .card-sale {
+        width: 300px;
+        height: 150px;
+    }
+    .card-sale span {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .card-registration {
+        width: 300px;
+        height: 220px;
+    }
+    .sidebar {
+        width: 194px;
+        min-height: 100vh;
+    }
+    .search-icon {
+        margin-right: 5px;
+        width: 36px;
+        height: 36px;
+    }
+    .nav-list {
+        font-size: 16px;
+    }
+    .sidebar-info {
+        font-size: 14px;
+    }
+    .card-section {
+        width: 300px;
+        height: 180px; 
+        object-fit: contain; /* Keep proportions and fit the image into the dimensions of the container */
+        display: block; 
+    }
+}
+
+/*..................... 900 ............................*/
+@media (max-width: 900px) {
+    .header-search {
+        display: none;
+    }
+    .sidebar-logo {
+        height: 100px;
+        width: 300px;
+        margin-top: -50px;
+    }
+    .nav-list {
+        font-size: 15px;
+    }
+    .sidebar-info {
+        font-size: 13px;
+    }
+    .sidebar {
+        width: 160px;
+        min-height: 100vh;
+    }
+    .card-sale {
+        width: 250px;
+        height: 150px;
+    }
+    .card-sale span {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .card-registration {
+        width: 250px;
+        height: 220px;
+    }
+    .card-section {
+        width: 250px;
+        height: 180px;
+        object-fit: contain;
+        display: block;
+    }
+    .sidebar-info img {
+        height:18px;
+        width: 18px;
+    }
+    .nav-title {
+        font-size: 23px;
+    }
+    .nav-header-list {
+        margin-left: 180px;
+    }
+}
+
+/*.................... 700 .............................*/
+@media (max-width: 700px) {
+    .product-link-1 {
+        display: none;
+    }
+    .nav-header {
+        font-size: 16px;
+    }
+    .lower-horizon {
+        display: none;
+    }
+    .lower-card {
+        width: 220px;
+    }
+    .card-sale {
+        width: 245px;
+        height: 150px;
+    }
+    .card-sale span {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .card-registration {
+        width: 245px;
+        height: 220px;
+    }
+    .nav-header-list {
+        margin-left: 0px;
+    }
+}
+
+/*...................... 550 ....   ..................*/
+@media (max-width: 550px) {
+    .lower-card-img-4 {
+        display: none;
+    }
+    .product-link-2 {
+        display: flex; /* Arranges the child elements inside the container as a flex-container */
+        flex-direction: column;
+    }
+    .main {
+        flex-direction: column;
+        padding-top: 56px;
+        margin-right: 80px;
+    }  
+    .cards-wrapper-row,
+    .lower-horizon {
+        flex-direction: column;
+    }
+    .cards-wrapper-col {
+        width: 100%;
+    }
+    .sidebar {
+        width: 175px;
+        min-height: 100vh;
+        padding: 50px 15px 60px 40px;
+    }
+    .sidebar-info {
+        font-size: 13px;
+    }
+    .sidebar-logo {
+        height: 100px;
+        width: 300px;
+        margin-top: -50px;
+    }
+    .card-sale {
+        width: 300px;
+        height: 120px;
+        margin-bottom: 4px;
+    }
+    .card-sale span {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .card-registration {
+        width: 300px;
+        height: 205px;
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    .col-horizontal {
+        width: 300px;
+    }
+    .product-link-2 {
+        width: 100%;
+        height: 380px;
+        object-fit: cover; 
+        border-radius: 15px; 
+    }
+    .lower-card {
+        width: 100%;
+        height: 380px;
+        object-fit: cover; 
+        border-radius: 15px;
+    }
+    .nav-header {
+        font-size: 15px;
+        flex-wrap: wrap;
+        margin-bottom: -40px;
+    }
+    .nav-header-list {
+        flex-wrap: wrap; 
+    }
+    .nav-header-link-text,
+    .nav-header-link-icon {
+        margin-left: 10px;
+        margin-right: -10px;
+        margin-bottom: 15px;
+    }
+    .nav-title{
+        font-size: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+/*.................... 450 .............................*/
+@media (max-width: 450px) {
+    .main {
+        flex-direction: column;
+        padding-top: 56px;
+    }   
+    .cards-wrapper-row,
+    .lower-horizon {
+        flex-direction: column;
+    }
+    .cards-wrapper-col {
+        width: 100%; /* Takes up the entire width in the new vertical arrangement */
+    }
+    .sidebar {
+        width: 140px;
+        min-height: 100vh;
+        padding: 50px 15px 60px 27px;
+    }
+    .sidebar-info {
+        font-size: 12px;
+    }
+    .sidebar-logo {
+        height: 100px;
+        width: 300px;
+        margin-top: -50px;
+    }
+    .card-sale {
+        width: 245px;
+        height: 120px;
+        margin-bottom: 4px;
+    }
+    .card-sale span {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .card-registration {
+        width: 245px;
+        height: 205px;
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    .col-horizontal {
+        width: 245px;
+    }
+    .product-link-2 {
+        width: 100%;
+        height: 380px;
+        object-fit: cover; /* This property preserves the image proportions when the image is stretched */
+        border-radius: 15px;
+    }
+    .lower-card {
+        width: 100%;
+        height: 380px;
+        object-fit: cover; 
+        border-radius: 15px;
+    }
+    .nav-header {
+        font-size: 15px;
+        flex-wrap: wrap;
+        margin-bottom: -40px;
+    }
+    .nav-header-list {
+        flex-wrap: wrap; 
+    }
+    .nav-header-link-text,
+    .nav-header-link-icon {
+        margin-left: 10px;
+        margin-right: -10px;
+        margin-bottom: 15px;
+    }
+    .nav-title{
+        font-size: 22px;
+        margin-bottom: 28px;
+    }
+    .nav-header-link-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
